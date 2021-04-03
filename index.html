@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library/bootstrap.min.css">
+    <title>TO-DO App</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <button class="btn btn-primary mt-5" data-toggle="modal" data-target="#exampleModal"
+                    style="float: right;">Add Task</button>
+            </div>
+            <div class="col-6">
+                <table>
+                    <thead>
+                        <h3>TO-DO Task Application</h3>
+                    </thead>
+
+                    <tbody id='task_list'></tbody>
+                </table>
+
+            </div>
+            <div class="col-2"></div>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New Task</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Task Description</label>
+                                <textarea id='task_content' class="form-control"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button id='add_task' type="button" class="btn btn-success">Add Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="library/jquery.min.js"></script>
+    <script src="library/bootstrap.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
